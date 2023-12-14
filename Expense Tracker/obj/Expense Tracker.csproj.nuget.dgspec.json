@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "D:\\YouTube\\Videos\\Asp.Net Core\\Expense Tracker\\Project\\Expense Tracker\\Expense Tracker\\Expense Tracker.csproj": {}
+    "C:\\Users\\admin\\Desktop\\Projet-.NET-GL3\\Expense Tracker\\Expense Tracker.csproj": {}
   },
   "projects": {
-    "D:\\YouTube\\Videos\\Asp.Net Core\\Expense Tracker\\Project\\Expense Tracker\\Expense Tracker\\Expense Tracker.csproj": {
+    "C:\\Users\\admin\\Desktop\\Projet-.NET-GL3\\Expense Tracker\\Expense Tracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\YouTube\\Videos\\Asp.Net Core\\Expense Tracker\\Project\\Expense Tracker\\Expense Tracker\\Expense Tracker.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Projet-.NET-GL3\\Expense Tracker\\Expense Tracker.csproj",
         "projectName": "Expense Tracker",
-        "projectPath": "D:\\YouTube\\Videos\\Asp.Net Core\\Expense Tracker\\Project\\Expense Tracker\\Expense Tracker\\Expense Tracker.csproj",
-        "packagesPath": "C:\\Users\\CodAffection\\.nuget\\packages\\",
-        "outputPath": "D:\\YouTube\\Videos\\Asp.Net Core\\Expense Tracker\\Project\\Expense Tracker\\Expense Tracker\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Desktop\\Projet-.NET-GL3\\Expense Tracker\\Expense Tracker.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\Projet-.NET-GL3\\Expense Tracker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\CodAffection\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,26 +35,40 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[7.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -73,7 +85,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -85,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
