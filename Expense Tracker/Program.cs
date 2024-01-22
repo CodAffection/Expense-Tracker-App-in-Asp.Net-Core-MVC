@@ -1,10 +1,45 @@
 using Expense_Tracker.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddLocalization(options =>
+{
+    options.ResourcesPath = "Resources";
+});
+
+
+//builder.Services.AddControllersWithViews().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
+//builder.Services
+//    .AddControllersWithViews()
+//    .AddViewLocalization()
+//    .AddDataAnnotationsLocalization();
+
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+    .AddDataAnnotationsLocalization();
+
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+
+    const string defaultCulture = "en-US";
+    var supportedCultures = new[]
+    {
+        new CultureInfo("en-US"),
+        new CultureInfo("fr-FR")
+    };
+
+    options.DefaultRequestCulture = new RequestCulture(defaultCulture);
+    options.SupportedUICultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+});
 
 //DI
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -20,6 +55,9 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+
+app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
+
 app.UseStaticFiles();
 
 app.UseRouting();

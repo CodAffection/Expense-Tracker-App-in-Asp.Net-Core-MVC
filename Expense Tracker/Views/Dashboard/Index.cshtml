@@ -1,6 +1,10 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+
 @{
     ViewData["isDashboard"] = true;
 }
@@ -14,7 +18,7 @@
                 <i class="fa-solid fa-dollar-sign fa-2xl"></i>
             </div>
             <div class="d-flex flex-column m-auto py-3">
-                <span class="lead">Total Income</span>
+                <span class="lead">@Localizer["TotalIncome"]</span>
                 <h1 class="display-6 fw-bold">@ViewBag.TotalIncome</h1>
             </div>
         </div>
